@@ -1,0 +1,65 @@
+@import '/assets/styles/media-queries';
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 70%;
+    padding: 4rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    @include xs {
+        width: 95%;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+
+
+        label {
+            font-size: 1.8rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        input,
+        textarea {
+            border: 1px solid var(--divider);
+            outline: 0;
+            border-radius: 3px;
+            padding: 7.5px 5px;
+
+            &:focus {
+                border-color: var(--accent);
+            }
+        }
+
+        textarea {
+            min-height: 20rem;
+        }
+    }
+
+    .form-btn-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .btn {
+            margin-left: 0.5rem;
+        }
+    }
+}

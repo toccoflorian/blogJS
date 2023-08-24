@@ -1,0 +1,119 @@
+@import '/assets/styles/media-queries';
+
+.content {
+    background-color: var(--divider);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 12.5rem;
+
+    @include xs {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: 0 0 25rem;
+        // background-color: yellow;
+        padding: 0 2rem 2rem 2rem;
+
+        select {
+            width: 100%;
+            box-shadow: var(--box-shadow);
+            border: none;
+            padding: 1rem 1rem;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            border-radius: 0.3rem;
+        }
+
+        .categories {
+            padding: 2rem;
+            border-radius: 0.3rem;
+            background-color: white;
+            box-shadow: var(--box-shadow);
+
+            li {
+
+                margin-bottom: 10px;
+
+                &:hover {
+                    transition: 0.2s;
+                    color: var(--primary);
+                    cursor: pointer;
+                }
+
+
+            }
+
+            li.category-selected {
+
+                font-weight: bold;
+                color: var(--primary);
+
+            }
+        }
+
+    }
+
+
+    .articles-container {
+        flex: 1;
+        max-width: 80rem;
+        // margin: 5rem 0 10rem 0;
+
+
+
+        .article {
+            background-color: white;
+            padding: 0 5rem;
+            border-radius: 0.3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 5rem;
+
+            @include xs {
+                padding: 0 25px;
+            }
+
+            img {
+                height: 6rem;
+                width: 6rem;
+                border-radius: 50%;
+                margin-top: -3rem;
+            }
+
+            h2 {
+                margin: 2rem 0 0 0;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            &-author {
+                color: var(--hint);
+                margin-bottom: 3rem;
+                text-align: center;
+            }
+
+            &-content {
+                white-space: pre-line;
+            }
+
+            &-actions {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                padding: 2rem 2rem;
+
+                @include xs {
+                    justify-content: center;
+                }
+
+                .btn {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
